@@ -126,6 +126,10 @@
     return [self.javascriptWebView valueForKeyPath: @"documentView.webView.mainFrame.javaScriptContext"];
 }
 
+-(void)disconnect {
+    [self.javascriptContext evaluateScript: @"objc_socket.disconnect();"];
+}
+
 // Event listeners
 - (void)on:(NSString *)event do:(void (^)(id))function
 {

@@ -24,6 +24,7 @@
 @property (nonatomic, copy) void (^onReconnectionError)(NSDictionary *errorInfo);
 
 - (void)on:(NSString *)event do:(void (^)(id data))function;
+- (void)disconnect;
 
 // Emitters
 - (void)emit:(NSString *)event, ... NS_REQUIRES_NIL_TERMINATION;
